@@ -1,0 +1,48 @@
+* {
+	font-family: Helvetica;
+}
+
+.Box {
+	display: inline-flex;
+	width: 100%;
+	text-align: center;
+}
+
+.Factor {
+	font-size: 40px;
+	font-style: bold;
+}
+
+.CheckPrice {
+	background-color: white;
+	width: 33%;
+	border-style: solid;
+	margin: 3px;
+	border-radius: 20px;
+}
+
+.CheckWeatherproof {
+	background-color: white;
+	width: 33%;
+	border-style: solid;
+	margin: 3px;
+	border-radius: 20px;
+}
+
+.CheckTourist {
+	background-color: white;
+	width: 33%;
+	border-style: solid;
+	margin: 3px;
+	border-radius: 20px;
+}
+
+.Result {
+	background-color: black;
+	color: white;
+	width: 100%;
+	border-style: solid;
+	margin: 3px;
+	border-radius: 20px;
+	text-align: center;
+}
