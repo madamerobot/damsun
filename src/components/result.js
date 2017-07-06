@@ -26,27 +26,15 @@ class Result extends Component {
 	//EMPTY ARRAY FOR RESULTS
 	const results = [];
 
-	//CHECK HOW TO CALL VALUES FROM ARRAY
-	// const placejson = data[0].Place;
-	// const touristjson = data[0].Touristfactor;
-	// console.log('Place: '+placejson+' Tourist: '+touristjson);
-
-		return data.map((data) => {
-			if(data.Price <= price){
-				
+		data.map((data) => {
+			if(data.Price <= price){				
 				results.push(data.Place);
-				console.log('Result: '+results);
-				
-				return results.map((results) => {
-					return (
-						<div>
-							<h1 className="results" key={results}>{results}</h1>
-						</div>
-					)
-				});
+				console.log('Results: '+results);
 			}
+		});
+		return results.map ((results) => {
 			return (
-				<h1>No matches found</h1>
+				<h1 className="results">{results}</h1>
 			)
 		});
 	}
