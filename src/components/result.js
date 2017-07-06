@@ -3,12 +3,7 @@ import React, { Component } from 'react';
 class Result extends Component {	
 	
 	render() {
-
-		//CHECK DATA DELIVERY
-		// const output = this.props.data;
-		// const string = JSON.stringify(output);
-		// console.log('JSON file: '+string);
-
+		
 		const findResults = this._findResults();
 
 		return (
