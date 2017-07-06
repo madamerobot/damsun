@@ -7,15 +7,23 @@ import CheckWeatherproof from './checkWeatherproof';
 import Result from './result';
 import './style.css';
 import DATA from '../sunspots'
+import Poti from './poti';
 
 class App extends Component {
 
   constructor(props){   
     super(props);
-    this.state = {tourist: '1', price: '1', proof: '1'};
+
+    this.state = {tourist: '1', 
+                  price: '1', 
+                  proof: '1',
+                  value: '100',
+                };
+
     this.changeTourist = this.changeTourist.bind(this);
     this.changePrice = this.changePrice.bind(this);
     this.changeProof = this.changeProof.bind(this);
+    this.changePoti = this.changePoti.bind(this);
   }
 
   changeTourist (tourist) {
@@ -29,6 +37,10 @@ class App extends Component {
   changeProof (proof) {
     this.setState({ proof: proof })
   }
+
+  changePoti (value) {
+    this.setState({ value: value })
+  }
   
   render() {
     return (
@@ -41,6 +53,10 @@ class App extends Component {
         <div className="Result">
           <h1>Your match:</h1>
           <Result data={DATA} tourist={this.state.tourist} price={this.state.price} proof={this.state.proof} />
+        </div>
+        <div>
+          <h1>Testing the Poti</h1>
+          <Poti value={this.state.value} onChange={this.changePoti} />
         </div>
       </div>
     );
