@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 import CheckTourist from './checkTourist';
 import CheckPrice from './checkPrice';
 import CheckWeatherproof from './checkWeatherproof';
+import Result from './result';
 import './style.css';
+import DATA from '../sunspots'
 
 class App extends Component {
 
@@ -34,10 +36,11 @@ class App extends Component {
         <div className="Box">
             <CheckTourist tourist={this.state.tourist} onChange={this.changeTourist} />
             <CheckPrice price={this.state.price} onChange={this.changePrice} />
-            <CheckWeatherproof weather={this.state.weather} onChange={this.changeProof} />
+            <CheckWeatherproof proof={this.state.proof} onChange={this.changeProof} />
         </div>
         <div className="Result">
-          <h1>Your match: Beukenplein</h1>
+          <h1>Your match:</h1>
+          <Result data={DATA} tourist={this.state.tourist} price={this.state.price} proof={this.state.proof} />
         </div>
       </div>
     );
