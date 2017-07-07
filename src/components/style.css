@@ -2,81 +2,25 @@
 	font-family: Helvetica;
 }
 
-/*POTI STYLES*/
-
-.Marker {
-	position: absolute; 
-	top: 50%; 
-	left: 50%
-}
-
-.Markers {
-	font-size: 1rem;
-	transform: rotate(60deg) translateY(calc(50px - 0.5em));  
-}
-
-.Knob {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 1em;
-    width: 1em;
-    border-radius: 50%;
-    border-style: solid
-}
-
-.Indicator {
-	height: 50%; 
-	width: 2px; 
-	position: absolute; 
-	bottom: 0px; 
-	left: 50%; 
-	margin-left: -1px; 
-	background-color: currentcolor
-}
-
-.Knob-wrapper {
-	font-size: 50px; 
-	height: 100px; 
-	width: 100px; 
-	position: relative;
-}
-
 /* MACHINE STYLES */
 
 .Box {
-	display: inline-flex;
 	width: 100%;
+	text-align: center;
+}
+
+.Subbox {
+	display: inline-flex;
+	background-color: white;
+	border-style: solid;
+	margin: 3px;
+	border-radius: 20px;
 	text-align: center;
 }
 
 .Factor {
 	font-size: 40px;
 	font-style: bold;
-}
-
-.CheckPrice {
-	background-color: white;
-	width: 33%;
-	border-style: solid;
-	margin: 3px;
-	border-radius: 20px;
-}
-
-.CheckWeatherproof {
-	background-color: white;
-	width: 33%;
-	border-style: solid;
-	margin: 3px;
-	border-radius: 20px;
-}
-
-.CheckTourist {
-	background-color: white;
-	width: 33%;
-	border-style: solid;
-	margin: 3px;
-	border-radius: 20px;
 }
 
 .Result {

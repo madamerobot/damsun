@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 
 //CUSTOM COMPONENTS
-import CheckTourist from './checkTourist';
-import CheckPrice from './checkPrice';
-import CheckWeatherproof from './checkWeatherproof';
-import Result from './result';
 import './style.css';
+import Result from './result';
 import DATA from '../sunspots'
 import Knob from './Knob';
 
@@ -24,32 +21,29 @@ class App extends Component {
     this.changeProof = this.changeProof.bind(this);
   }
 
-  changeTourist (tourist) {
-    this.setState({ tourist: tourist })
+  changeTourist (value) {
+    this.setState({ tourist: value })
   }
 
-  changePrice (price) {
-    this.setState({ price: price })
+  changePrice (value) {
+    this.setState({ price: value })
   }
 
-  changeProof (proof) {
-    this.setState({ proof: proof })
+  changeProof (value) {
+    this.setState({ proof: value })
   }
   
   render() {
     return (
       <div>
-        <div className="Box">
-            <CheckTourist tourist={this.state.tourist} onChange={this.changeTourist} />
-            <CheckPrice price={this.state.price} onChange={this.changePrice} />
-            <CheckWeatherproof proof={this.state.proof} onChange={this.changeProof} />
+        <div className="Subbox">
+            <Knob name="Tourist" value={this.state.tourist} onChange={this.changeTourist}/>
+            <Knob name="Price" value={this.state.price} onChange={this.changePrice}/>
+            <Knob name="Weather" value={this.state.proof} onChange={this.changeProof}/>
         </div>
         <div className="Result">
           <h1>Your match:</h1>
           <Result data={DATA} tourist={this.state.tourist} price={this.state.price} proof={this.state.proof} />
-        </div>
-        <div>
-          <Knob />
         </div>
       </div>
     );
