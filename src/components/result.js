@@ -28,7 +28,7 @@ class Result extends Component {
 			}
 		});
 		if(results.length<=0){
-			return <h1 className="results">No results found</h1>
+			return <h1 className="results">Sorry, you are too picky. No results found.</h1>
 		}
 		return results.map ((results) => {
 			return (

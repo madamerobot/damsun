@@ -97,46 +97,32 @@ class Knob extends Component {
     	const rotation = this.rest + (this.props.value - min) * baseAngle
 
 		return (
-				<div className="Knob">
-					<svg width="202" height="202">
-							<g>
+				<div className="Knobarea">
+					<div className="Labels">
+						<div className="Label">{this.props.name}</div>
+						<div className="Label">{this.props.value}</div>
+						<div className="Slider">
+							<input type="range" value={this.props.value} min="0" max="5" onChange={this.handleChange}/>
+						</div>
+					</div>
+					<svg width="202" height="202" className="SVG">
+						<g>
 						  <title>Biggest Circle</title>
 						  <circle 	id="svg_1" 
-									r="98.31073" 
+									r="80" 
 									cy="100.81073" 
 									cx="100.81073" 
 									strokeLinecap="null" 
 									strokeLinejoin="null" 
 									strokeDasharray="null" 
 									strokeWidth="3" 
-									stroke="#000000" 
-									fill="pink" 
+									stroke="#A58D77" 
+									fill="#B7A492" 
 									onMouseMove={this._onMouseMove.bind(this)}/>
 						 </g>
 						 <g display="inline">
 						  <title>Smaller Circle plus Indicator</title>
-						  <circle 	stroke="#000000" 
-						  			id="svg_4" 
-						  			r="65.027023" 
-						  			cy="100.810733" 
-						  			cx="101.310734" 
-						  			strokeLinecap="null" 
-						  			strokeLinejoin="null" 
-						  			strokeDasharray="null" 
-						  			strokeWidth="3" 
-						  			fill="#000000"/>
-						  <circle 	id="svg_6" 
-						  			stroke="#ffffff" 
-						  			fill-opacity="0" 
-						  			r="32.027023" 
-						  			cy="101.310732" 
-						  			cx="101.81073" 
-						  			strokeLinecap="null" 
-						  			strokeLinejoin="null" 
-						  			strokeDasharray="null" 
-						  			strokeWidth="3" 
-						  			fill="#000000"/>
-						  <line 	id="svg_12" 
+						   <line 	id="svg_12" 
 						  			x1="102.81073" 
 						  			y1="6.810728" 
 						  			x2="102.81073" 
@@ -145,20 +131,24 @@ class Knob extends Component {
 						  			strokeLinejoin="null" 
 						  			strokeDasharray="null" 
 						  			strokeWidth="3" 
-						  			stroke="#ffffff" 
+						  			stroke="black" 
 						  			fill="none"
 						  			transform={`rotate(${rotation},102,97)`}
-						  			/>
+						  	/>
+						  <circle 	id="svg_6" 
+						  			stroke="#DFB9A8" 
+						  			fill-opacity="0" 
+						  			r="32.027023" 
+						  			cy="101.310732" 
+						  			cx="101.81073" 
+						  			strokeLinecap="null" 
+						  			strokeLinejoin="null" 
+						  			strokeDasharray="null" 
+						  			strokeWidth="3" 
+						  			fill="#BF7251"/>
 						</g>
 					</svg>
-				<div>
-					<input type="range" value={this.props.value} min="0" max="5" onChange={this.handleChange}/>
 				</div>
-				<div>
-					<p>{this.props.name}</p>
-					<p>{this.props.value}</p>
-				</div>
-			</div>
 		)
 	}
 }

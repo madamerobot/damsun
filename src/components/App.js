@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 //CUSTOM COMPONENTS
 import './style.css';
-import Result from './result';
-import DATA from '../sunspots'
+import Result from './Result';
 import Knob from './Knob';
+import DATA from '../sunspots'
 
 class App extends Component {
 
@@ -35,16 +35,20 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        <div className="Subbox">
-            <Knob name="Tourist" value={this.state.tourist} onChange={this.changeTourist}/>
-            <Knob name="Price" value={this.state.price} onChange={this.changePrice}/>
-            <Knob name="Weather" value={this.state.proof} onChange={this.changeProof}/>
-        </div>
+      <div className="Machine-Wrapper">
         <div className="Result">
-          <h1>Your match:</h1>
-          <Result data={DATA} tourist={this.state.tourist} price={this.state.price} proof={this.state.proof} />
-        </div>
+            <h1 className="Headline">The Dam <br/>🍦Sun Machine🍦</h1>
+            <h2 className="Tagline">Finding your hangout spot <br/> within the blink of an eye</h2>
+            <h1 className="Headline">Your match:</h1>
+            <Result data={DATA} tourist={this.state.tourist} price={this.state.price} proof={this.state.proof} />
+          </div>
+          <div className="Subbox">
+            <div className="Knobwrapper">
+              <Knob name="Rainproof" value={this.state.proof} onChange={this.changeProof}/>
+              <Knob name="Tourist" value={this.state.tourist} onChange={this.changeTourist}/>
+              <Knob name="Price" value={this.state.price} onChange={this.changePrice}/>
+            </div>
+          </div>
       </div>
     );
   }
