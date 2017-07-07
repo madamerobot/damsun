@@ -11,7 +11,7 @@ class Knob extends Component {
 			max: 5,
 			radius: 125,
 			size: 100,
-			fullAngle: 300,
+			fullAngle: 360,
 			step: 1,
 			rotation: 40
 		} 
@@ -62,18 +62,23 @@ class Knob extends Component {
 	updateValue(event) {
 	
 		const deg = this._coordToDeg(event.clientX, event.clientY);
+		
 		console.log('01 Deg: '+deg);
 		console.log('this.state.fullAngle: '+this.state.fullAngle);
 		console.log('deg: '+deg);
 		console.log('this.rest: '+this.rest);
+		
 		const boundDeg = Math.max(0, Math.min(this.state.fullAngle, deg - this.rest));
 		console.log('02 boundDeg: '+boundDeg);
+		
 		const rawValue = (boundDeg / this.state.fullAngle * this.range + this.state.min)
 		console.log('03 rawValue: '+rawValue);
+		
 		const value = Math.round(rawValue / this.state.step) * this.state.step;
 		console.log('04 Value: '+value);
 
-		this.setState({rotation: value})
+		this.setState({rotation: deg})
+		// this.props.onChange(value);
 	}
 
 	_onMouseMove(event){		
@@ -86,6 +91,10 @@ class Knob extends Component {
 	}
 
 	render(){
+		
+		const {min, max, step, size, fullAngle} = this.state
+    	const baseAngle = fullAngle / this.range
+    	const rotation = this.rest + (this.props.value - min) * baseAngle
 
 		return (
 				<div className="Knob">
@@ -138,7 +147,7 @@ class Knob extends Component {
 						  			strokeWidth="3" 
 						  			stroke="#ffffff" 
 						  			fill="none"
-						  			transform={`rotate(${this.state.rotation},102,97)`}
+						  			transform={`rotate(${rotation},102,97)`}
 						  			/>
 						</g>
 					</svg>
@@ -146,8 +155,8 @@ class Knob extends Component {
 					<input type="range" value={this.props.value} min="0" max="5" onChange={this.handleChange}/>
 				</div>
 				<div>
-				<p>{this.props.name}</p>
-				<p>{this.props.value}</p>
+					<p>{this.props.name}</p>
+					<p>{this.props.value}</p>
 				</div>
 			</div>
 		)
