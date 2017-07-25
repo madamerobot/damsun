@@ -45,8 +45,8 @@ class App extends Component {
           <div className="Subbox">
             <div className="Knobwrapper">
               <Knob name="Rainproof" value={this.state.proof} onChange={this.changeProof}/>
-              <Knob name="Tourist" value={this.state.tourist} onChange={this.changeTourist}/>
-              <Knob name="Price" value={this.state.price} onChange={this.changePrice}/>
+              <Knob name="Touristzone" value={this.state.tourist} onChange={this.changeTourist}/>
+              <Knob name="Pricelevel" value={this.state.price} onChange={this.changePrice}/>
             </div>
           </div>
       </div>

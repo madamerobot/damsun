@@ -32,7 +32,7 @@ class Result extends Component {
 		}
 		return results.map ((results) => {
 			return (
-				<h1 key={results} className="results">{results}</h1>
+				<h1 key={results} className="results">{results}📍</h1>
 			)
 		});
 	}

@@ -4,14 +4,14 @@
 }
 
 body {
-	background-color: #C696A7;
+	background-color: #95717D;
 }
 
 /*FONT IMPORT*/
 
 @font-face {
 	font-family: Bungee;
-	src: url('../styling/bungee/Bungee-Regular.otf')
+	src: url('../styling/bungee/Bungee-Regular.otf') format("opentype");
 }
 
 /* MACHINE STYLES */
@@ -77,6 +77,7 @@ body {
 	line-height: 50%;
 	font-size: 20px;
 	font-weight: 200;
+	font-family: Bungee;
 }
 
 .Slider {
@@ -103,7 +104,13 @@ body {
 	font-weight: 100;
 }
 
-/*STYLING INPUT SLIDER, TAKEN FROM https://codepen.io/jacoba/pen/wWQKZw*/
+/*STYLING INPUT SLIDER, ORIGINAL CODE TAKEN FROM 
+https://codepen.io/jacoba/pen/wWQKZw*/
+
+input[type=range]{
+
+}
+
 input[type=range]{
     -webkit-appearance: none;
     background: transparent;
@@ -117,15 +124,15 @@ input[type=range]:focus {
 input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
   width: 90%;
-  background: rgba(78,78,76,0.2);
+  background: black;
   cursor: pointer;
 }
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 22px;
   width: 22px;
-  background-color: rgba(78,78,76,1);
-  border: 3px solid #9cd3d2;
+  background-color: #D3C76E;
+  border: 3px solid #D3C76E;
   margin-top: -9px;
   border-radius: 50%;
   transition: .1s ease-in-out;
@@ -135,7 +142,7 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: rgba(78,78,76,0.2);
+    background: black;
 }
 
 /**MOZ**/
@@ -144,8 +151,8 @@ input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   height: 22px;
   width: 22px;
-  background-color: rgba(78,78,76,1);
-  border: 3px solid #9cd3d2;
+  background-color: #D3C76E;
+  border: 3px solid #D3C76E;
   margin-top: -9px;
   border-radius: 50%;
   transition: .1s ease-in-out;
@@ -153,7 +160,7 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-moz-range-track {
   height: 5px;
   width: 100%;
-  background: rgba(78,78,76,0.2);
+  background: black;
   cursor: pointer;
 }
 input[type=range]::-moz-focus-outer {
@@ -162,8 +169,8 @@ input[type=range]::-moz-focus-outer {
  /**IE**/
 
 input[type=range]::-ms-thumb {
-  background-color: rgba(78,78,76,1);
-  border: 2px solid #9cd3d2;
+  background-color: #D3C76E;
+  border: 2px solid #D3C76E;
   border-radius: 50%;
   height: 11px;
   width: 11px;
@@ -179,14 +186,14 @@ input[type=range]::-ms-track {
   cursor: pointer;
 }
 input[type=range]::-ms-fill-lower {
-  background: #9cd3d2;
+  background: #D3C76E;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #9cd3d2;
+  background: #D3C76E;
 }
 input[type=range]::-ms-fill-upper {
-  background: rgba(78,78,76,0.2);
+  background: black;
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: rgba(78,78,76,0.2);
+  background: black;
 }
