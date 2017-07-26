@@ -15,8 +15,8 @@
 <ul>
 	<li>Main App compontent, holding state of slider input values from potentiometer (e.g. Touristfactor '4').</li>
 	<li>Results component, which does all the logic to filter results according to slider values and renders result array (e.g. 'Wertheimpark').</li>
-	<li>Knob component, holding state regarding Knob SVG styling (radius, steps, size of Knob, actual SVG code). It also holds all logic to receive slider input and transform it into degree rotation for the CSS transform of the Potentiometer Indicator.
-</li>
+	<li>Knob component, holding state regarding Knob SVG styling (radius, steps, size of Knob, actual SVG code). It also holds all logic to receive slider input and transform it into degree rotation for the CSS transform of the Potentiometer Indicator.</li>
+</ul>
 <p>Overview:</p>
 ![App Components](/public/screenshots/components.png?raw=true "Component Overview")
 
@@ -29,4 +29,10 @@
 
 <h2>Screenshot</h2>
 ![Screenshots](/public/screenshots/sunmachine.png?raw=true "Landing Page")
+
+<h2>Credits</h2>
+<ul>
+	<li><a href="https://github.com/pixelass/netmag-React-UI-components">Pixelass and his NetMag Tutorial about UI Components</a></li>
+	<li><a href="https://reactforbeginners.com/">Wes Bro's React For Beginners Tutorial</a></li>
+</ul>
 
