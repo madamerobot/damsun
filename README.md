@@ -1,8 +1,8 @@
 <h2>Introduction</h2>
-<p>An app that helps all Amsterdammers to find the right sunspot to hang out (if there was sun).</p>
+<p>An app that helps all Amsterdammers to find the right sunspot to hang out (if there was sun). Live version: <a href="http://suninamsterdam.valerie-fuchs.de">suninamsterdam.valerie-fuchs.de</a></p>
 
 <h2>Build</h2>
-<p>This web-app was build with React, using <a href="http://maps.amsterdam.nl/open_geodata/">Amsterdam Open Geo Data</a> about Summerspots on the backend.</p>
+<p>This Node.JS app was build with React, using <a href="http://maps.amsterdam.nl/open_geodata/">Amsterdam Open Geo Data</a> about Summerspots on the backend.</p>
 
 <h2>Motivation</h2>
 <p>This project being my final project at New York Code and Design Academy, I wanted to build something fun which allows me to learn something new and useful. Due to the high popularity of React I've had it on my learn radar for a while, but our course was very back-end focussed and the thus React wasn't covered by our curriculum. Being very interested in city development and always on discovery mode, I also wanted to make usage of Amsterdam's open data: The idea of a React Sunmachine was born.</p>
@@ -17,8 +17,10 @@
 	<li>Results component, which does all the logic to filter results according to slider values and renders result array (e.g. 'Wertheimpark').</li>
 	<li>Knob component, holding state regarding Knob SVG styling (radius, steps, size of Knob, actual SVG code). It also holds all logic to receive slider input and transform it into degree rotation for the CSS transform of the Potentiometer Indicator.</li>
 </ul>
+
 <p>Overview:</p>
-![App Components](/public/screenshots/components.png?raw=true "Component Overview")
+
+![App Components](public/screenshots/components.png?raw=true "Component Overview")
 
 <h2>Challenges and Learnings</h2>
 <ul>
@@ -28,7 +30,8 @@
 </ul>
 
 <h2>Screenshot</h2>
-![Screenshots](/public/screenshots/sunmachine.png?raw=true "Landing Page")
+
+![Screenshots](public/screenshots/sunmachine.png?raw=true "Landing Page")
 
 <h2>Credits</h2>
 <ul>
