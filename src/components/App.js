@@ -11,9 +11,9 @@ class App extends Component {
   constructor(props){   
     super(props);
 
-    this.state = {tourist: '1', 
-                  price: '1', 
-                  proof: '1'
+    this.state = {tourist: '4', 
+                  price: '4', 
+                  proof: '3'
                 };
 
     this.changeTourist = this.changeTourist.bind(this);
