@@ -13,7 +13,7 @@ class App extends Component {
 
     this.state = {tourist: '4', 
                   price: '4', 
-                  proof: '3'
+                  proof: '4'
                 };
 
     this.changeTourist = this.changeTourist.bind(this);

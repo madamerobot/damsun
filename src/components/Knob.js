@@ -63,22 +63,21 @@ class Knob extends Component {
 	
 		const deg = this._coordToDeg(event.clientX, event.clientY);
 		
-		console.log('01 Deg: '+deg);
-		console.log('this.state.fullAngle: '+this.state.fullAngle);
-		console.log('deg: '+deg);
-		console.log('this.rest: '+this.rest);
+		// console.log('01 Deg: '+deg);
+		// console.log('this.state.fullAngle: '+this.state.fullAngle);
+		// console.log('deg: '+deg);
+		// console.log('this.rest: '+this.rest);
 		
 		const boundDeg = Math.max(0, Math.min(this.state.fullAngle, deg - this.rest));
-		console.log('02 boundDeg: '+boundDeg);
+		// console.log('02 boundDeg: '+boundDeg);
 		
 		const rawValue = (boundDeg / this.state.fullAngle * this.range + this.state.min)
-		console.log('03 rawValue: '+rawValue);
+		// console.log('03 rawValue: '+rawValue);
 		
 		const value = Math.round(rawValue / this.state.step) * this.state.step;
-		console.log('04 Value: '+value);
+		// console.log('04 Value: '+value);
 
 		this.setState({rotation: deg})
-		// this.props.onChange(value);
 	}
 
 	_onMouseMove(event){		
@@ -94,6 +93,9 @@ class Knob extends Component {
 		
 		const {min, max, step, size, fullAngle} = this.state
     	const baseAngle = fullAngle / this.range
+
+    	//As soon as handleChange is being triggered, this.props.value changes and thus indicator moves.
+    	//handleChange is hooked up with slider input value (see line 107)
     	const rotation = this.rest + (this.props.value - min) * baseAngle
 
 		return (
@@ -133,6 +135,7 @@ class Knob extends Component {
 						  			strokeWidth="3" 
 						  			stroke="black" 
 						  			fill="none"
+						  			//102,97 defines x/y of the indicator's center point
 						  			transform={`rotate(${rotation},102,97)`}
 						  	/>
 						  <circle 	id="svg_6" 
