@@ -118,8 +118,8 @@ class Knob extends Component {
 									strokeLinejoin="null" 
 									strokeDasharray="null" 
 									strokeWidth="3" 
-									stroke="#A58D77" 
-									fill="#B7A492" 
+									stroke="#848372" 
+									fill="black" 
 									onMouseMove={this._onMouseMove.bind(this)}/>
 						 </g>
 						 <g display="inline">
@@ -133,7 +133,7 @@ class Knob extends Component {
 						  			strokeLinejoin="null" 
 						  			strokeDasharray="null" 
 						  			strokeWidth="3" 
-						  			stroke="black" 
+						  			stroke="white" 
 						  			fill="none"
 						  			//102,97 defines x/y of the indicator's center point
 						  			transform={`rotate(${rotation},102,97)`}
